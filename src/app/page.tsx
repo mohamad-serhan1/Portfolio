@@ -24,7 +24,13 @@ function App() {
       {/* title */}
 
       <div className="flex gap-x-4 items-center mb-4 ">
-        <h1 className="text-2xl font-semibold ">Todo App</h1>
+        <h1 className="text-2xl font-semibold ">Mohammad Serhan Portfolio</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum
+          voluptatum quasi fugiat, eius officiis neque, doloribus debitis
+          voluptates sunt amet! Non quidem illum dolorem animi eaque consequatur
+          totam sit?
+        </p>
         <button onClick={toggleTheme}>
           <i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
         </button>
