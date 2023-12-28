@@ -1,40 +1,36 @@
 "use client";
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 
-import ThemeService from "@/shared/services/theme/theme.service";
-import ThemeSvcContext from "@/shared/services/theme/theme.context";
-import { Theme } from "@/shared/services/theme/theme.type";
 import ROUTES from "@/static/router.data";
-
+import Mainsidebar from "@/components/sidebar/mainsidebar";
+import Sidebar from "@/components/sidebar/Sidebar";
+import Herosection from "@/components/Herosection";
+import Myskills from "@/components/Myskills";
+import Education from "@/components/Education";
+import WorkHistory from "@/components/WorkHistory";
+import MyProject from "@/components/MyProject";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 function App() {
   // *~~*~~*~~ Theme svc ~~*~~*~~* //
 
-  const themeSvc = useContext<ThemeService>(ThemeSvcContext);
-
-  function toggleTheme() {
-    themeSvc.toggleTheme();
-
-    setTheme(themeSvc.theme);
-  }
-
-  const [theme, setTheme] = useState<Theme>(themeSvc.theme);
-
   return (
-    <div className="p-4 dark:text-white bg-white dark:bg-gray-900  min-h-screen transition-all">
-      {/* title */}
-
-      <div className="flex gap-x-4 items-center mb-4 ">
-        <h1 className="text-2xl font-semibold ">Mohammad Serhan Portfolio</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum
-          voluptatum quasi fugiat, eius officiis neque, doloribus debitis
-          voluptates sunt amet! Non quidem illum dolorem animi eaque consequatur
-          totam sit?
-        </p>
-        <button onClick={toggleTheme}>
-          <i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
-        </button>
+    <div className=" dark:text-white bg-gray-100 dark:bg-gray-800  min-h-screen transition-all">
+      <div className="flex flex-row justify-between gap-9">
+        <Mainsidebar />
+        <div className="flex flex-col px-12">
+          <Herosection />
+          <Myskills />
+          <Education />
+          <WorkHistory />
+          <MyProject />
+          <Contact />
+        </div>
+        <div className="fixed right-0 ">
+          <Sidebar />
+        </div>
       </div>
+          <Footer />
     </div>
   );
 }
