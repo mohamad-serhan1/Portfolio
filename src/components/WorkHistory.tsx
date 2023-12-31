@@ -2,7 +2,7 @@ import React from "react";
 
 const WorkHistory = () => {
   return (
-    <div className="flex flex-col pt-40   items-center justify-center space-y-20">
+    <div className="flex flex-col pt-40   items-center justify-center space-y-20" id="myWork">
       <h1 className=" font-bold text-3xl">Work History</h1>
       <p className='w-96 h-16 text-neutral-500 text-base font-normal'>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

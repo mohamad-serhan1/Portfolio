@@ -1,11 +1,12 @@
-import React from "react";
-import { useState, useContext, useEffect } from "react";
+import React, { useRef } from "react";
+import { useState, useContext } from "react";
 import ThemeService from "@/shared/services/theme/theme.service";
 import ThemeSvcContext from "@/shared/services/theme/theme.context";
 import { Theme } from "@/shared/services/theme/theme.type";
 import { MdHome } from "react-icons/md";
 import { FaFileCode } from "react-icons/fa6";
 import { FaUserGraduate } from "react-icons/fa6";
+import Link from "next/link";
 
 const Sidebar = () => {
   const themeSvc = useContext<ThemeService>(ThemeSvcContext);
@@ -27,16 +28,24 @@ const Sidebar = () => {
 
       <div className="pt-36 flex flex-col gap-12 justify-center items-center">
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
-          <MdHome size={22} />
+          <Link href="/#home">
+            <MdHome size={22} />
+          </Link>
         </div>
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
-          <FaFileCode size={22} />
+          <Link href="/#education">
+            <FaUserGraduate size={22} />
+          </Link>
         </div>
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
-          <FaUserGraduate size={22} />
+          <Link href="/#myWork">
+            <i className="fa-regular fa-briefcase fa-lg "></i>
+          </Link>
         </div>
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
-        <i className="fa-regular fa-briefcase fa-lg "></i>
+          <Link href="/#myProjects">
+            <FaFileCode size={22} />
+          </Link>
         </div>
       </div>
     </div>

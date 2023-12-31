@@ -6,8 +6,12 @@ import { SiTypescript } from "react-icons/si";
 import { SiVite } from "react-icons/si";
 import { BiLogoMongodb } from "react-icons/bi";
 import { SiPrisma } from "react-icons/si";
+import Image from "next/image";
 
 const Myskills = () => {
+    const myskills=[
+        {icons:"TbBrandNextjs",}
+    ]
   return (
     <div className="flex flex-col pt-40 ">
       <div className="text-center flex-col items-center justify-center space-y-20">
@@ -45,6 +49,7 @@ const Myskills = () => {
           
           <div className="flex flex-col justify-center items-center ">
             <SiPrisma size={100} className="text-[#194055]" />
+            Ima
             <h1 className="text-lg font-bold">Prisma</h1>
           </div>
 
