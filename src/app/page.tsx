@@ -15,9 +15,12 @@ function App() {
   // *~~*~~*~~ Theme svc ~~*~~*~~* //
 
   return (
-    <div className=" dark:text-white bg-gray-100 dark:bg-gray-800  min-h-screen transition-all">
-      <div className="flex flex-row justify-between gap-9">
-        <Mainsidebar />
+    <div className=" dark:text-white bg-gray-100 dark:bg-gray-800  min-h-screen transition-all relative">
+      <div className="flex flex-row gap-9">
+        <div>
+          <Mainsidebar />
+        </div>
+
         <div className="flex flex-col px-12">
           <Herosection />
           <Myskills />
@@ -26,11 +29,11 @@ function App() {
           <MyProject />
           <Contact />
         </div>
-        <div className="fixed right-0 ">
+        <div className=" sticky top-0  h-full">
           <Sidebar />
         </div>
       </div>
-          <Footer />
+      <Footer />
     </div>
   );
 }

@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   const [theme, setTheme] = useState<Theme>(themeSvc.theme);
   return (
-    <div className="flex flex-col mt-[50px] ">
+    <div className="flex flex-col mt-[50px] bg-white dark:bg-gray-900 p-10 ">
       <button onClick={toggleTheme}>
         <i
           className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"} mt-4`}
