@@ -17,7 +17,7 @@ function mainSidebar() {
   ];
 
   const skillsData = [
-    { name: "Html", percentage: "90%" },
+    { name: "Html", percentage: "100%" },
     { name: "CSS", percentage: "90%" },
     { name: "JS", percentage: "80%" },
     { name: "PHP", percentage: "70%" },

@@ -4,8 +4,8 @@ import ThemeService from "@/shared/services/theme/theme.service";
 import ThemeSvcContext from "@/shared/services/theme/theme.context";
 import { Theme } from "@/shared/services/theme/theme.type";
 import { MdHome } from "react-icons/md";
-import { FaFileCode } from "react-icons/fa6";
-import { FaUserGraduate } from "react-icons/fa6";
+import { FaFileCode, FaUserGraduate, FaSun, FaMoon ,FaBriefcase } from "react-icons/fa6";
+
 import Link from "next/link";
 
 const Sidebar = () => {
@@ -21,9 +21,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col mt-[50px] bg-white dark:bg-gray-900 p-10 ">
       <button onClick={toggleTheme}>
-        <i
-          className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"} mt-4`}
-        ></i>
+        {theme === "light" ? <FaSun size={24} /> : <FaMoon size={24} />}
       </button>
 
       <div className="pt-36 flex flex-col gap-12 justify-center items-center">
@@ -39,7 +37,8 @@ const Sidebar = () => {
         </div>
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
           <Link href="/#myWork">
-            <i className="fa-regular fa-briefcase fa-lg "></i>
+            {/* <i className="fa-regular fa-briefcase fa-lg "></i> */}
+            <FaBriefcase size={22}/>
           </Link>
         </div>
         <div className="w-10 h-10  rounded-full hover:bg-yellow-400 flex justify-center items-center">
